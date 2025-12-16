@@ -1,0 +1,39 @@
+.hero-header {
+  background-color: var(--primary-hint);
+  padding: 0 4.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 9.6rem;
+}
+.navbar {
+}
+.nav-link-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+.link:link,
+.link:visited {
+  font-size: 1.8rem;
+  color: #555;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+.link:hover,
+.link:active {
+  color: var(--primary-shade);
+}
+.link:focus {
+  box-shadow: 0 0 2px 5px red;
+}
+.nav-btn {
+  padding: 1.2rem 2.4rem;
+  border-radius: 7px;
+}
+.logo {
+  height: 2.2rem;
+}

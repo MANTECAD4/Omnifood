@@ -1,0 +1,54 @@
+.steps-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 6.4rem;
+  column-gap: 3.2rem;
+}
+
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #ddd;
+}
+.step-header {
+  font-size: 3.6rem;
+  line-height: 1.2;
+  margin: 0 0 3.2rem 0;
+}
+.step-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* margin: auto 0; */
+}
+.step-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+}
+.step-img img {
+  width: 35%;
+  /* max-width: 20rem; */
+}
+.step-img::before {
+  content: "";
+  background-color: #fdf2e9;
+  position: absolute;
+  z-index: -2;
+  width: 60%;
+  padding-bottom: 60%;
+  /* width: 35rem; */
+  border-radius: 50%;
+}
+.step-img::after {
+  content: "";
+  background-color: #fae5d3;
+  position: absolute;
+  z-index: -1;
+  width: 45%;
+  padding-bottom: 45%;
+  border-radius: 50%;
+}

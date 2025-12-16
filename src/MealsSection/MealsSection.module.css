@@ -1,0 +1,58 @@
+.meals-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: aqua; */
+}
+.cards-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6.4rem;
+}
+.diets-list-header {
+  margin: 0 0 3.6rem 0;
+  font-size: 3.2rem;
+}
+.diets-list {
+  padding: 0 0 0 2.4rem;
+  margin: 0;
+  list-style-position: outside;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.diet-item {
+  list-style-type: "✔";
+  padding-left: 1.5rem;
+  font-size: 2rem;
+}
+
+.see-recipes-link:link,
+.see-recipes-link:visited {
+  color: var(--primary-main);
+  margin: 6.4rem 0 0 0;
+  font-size: 2.4rem;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.25s;
+  line-height: 1.6;
+}
+.see-recipes-link:hover,
+.see-recipes-link:focus {
+  color: var(--primary-shade);
+  /* outline: 10px solid var(--primary-main); */
+}
+.see-recipes-link::before {
+  content: "";
+  border-top: 1px solid var(--primary-main);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  transition: all 0.25s;
+}
+.see-recipes-link:hover::before,
+.see-recipes-link:focus::before {
+  transform: scaleX(0);
+}

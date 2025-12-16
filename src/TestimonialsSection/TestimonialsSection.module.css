@@ -1,0 +1,29 @@
+.testimonials-section {
+  background-color: var(--primary-hint);
+}
+.testimonials-text {
+}
+.testimonials-text-grid {
+  gap: 2.4rem;
+}
+.testimonials-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+.gallery-item img {
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.25s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}

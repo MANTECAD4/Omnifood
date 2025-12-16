@@ -1,0 +1,13 @@
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+}
+.testimonial-picture {
+  width: 6.4rem;
+  clip-path: circle(50%);
+  height: 6.4rem;
+}
+.testimonial-name {
+  color: #666;
+  font-size: 1.6rem;
+}
