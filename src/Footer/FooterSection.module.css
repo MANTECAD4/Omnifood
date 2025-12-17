@@ -1,0 +1,49 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6.4rem;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+.footer-logo {
+  width: 80%;
+  margin-bottom: 3.2rem;
+}
+
+.social-media {
+  display: flex;
+  gap: 2.4rem;
+}
+.social-media-logo {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.footer-heading {
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin-bottom: 2.4rem;
+}
+
+.footer-text:link,
+.footer-text:visited {
+  font-size: 1.6rem;
+  line-height: 1.25;
+  color: #666;
+  text-decoration: none;
+  margin: 1rem 0;
+  transition: color 0.25s;
+}
+
+.footer-text:hover {
+  color: #333;
+}
+
+.copyright {
+  margin-top: auto;
+  font-size: 1.4rem;
+  line-height: 1.25;
+}

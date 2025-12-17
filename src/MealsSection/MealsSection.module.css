@@ -10,10 +10,10 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 6.4rem;
 }
-.diets-list-header {
+/* .diets-list-header {
   margin: 0 0 3.6rem 0;
   font-size: 3.2rem;
-}
+} */
 .diets-list {
   padding: 0 0 0 2.4rem;
   margin: 0;

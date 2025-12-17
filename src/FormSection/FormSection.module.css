@@ -1,11 +1,13 @@
 .cta {
   background-color: var(--primary-main);
-  max-width: 120rem;
-  margin: 0 auto;
+  max-width: 115rem;
+  margin: 4.8rem auto 9.8rem auto;
   display: flex;
   border-radius: 15px;
   overflow: hidden;
   color: #333;
+  box-shadow: var(--shadow-2);
+  /* border: 10px solid red; */
 }
 .cta-text-content {
   padding: 4.8rem;

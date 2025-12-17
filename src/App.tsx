@@ -1,3 +1,4 @@
+import { FooterSection } from "./Footer/FooterSection";
 import { FormSection } from "./FormSection/FormSection";
 import { Hero } from "./HeroSection/Hero";
 import { Navbar } from "./HeroSection/Navbar/Navbar";
@@ -18,6 +19,8 @@ export const App = () => {
       <TestimonialsSection />
       <PricingSection />
       <FormSection />
+      <hr style={{ border: "1px solid rgba(1,1,1,0.1)" }} />
+      <FooterSection />
     </>
   );
 };

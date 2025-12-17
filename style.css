@@ -26,6 +26,9 @@
   --border-radius-1: 10px;
   --fade-down: fadeDown 1s ease infinite;
   --shadow-1: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  --shadow-2: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  --shadow-3: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 * {
   box-sizing: border-box;
@@ -45,7 +48,7 @@ p {
 .section-content-container {
   max-width: 120rem;
   margin: 0 auto;
-  padding: 9.6rem 3.2rem;
+  padding: 9.6rem 3.6rem;
 }
 .grid {
   display: grid;
@@ -68,7 +71,7 @@ p {
   margin-bottom: 7.4rem;
 }
 .header-3 {
-  font-size: 3.6rem;
+  font-size: 3.2rem;
   line-height: 1.2;
   margin: 0 0 3.2rem 0;
   color: #333;
@@ -76,7 +79,7 @@ p {
 .subheader {
   text-transform: uppercase;
   font-size: 1.6rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
   font-weight: 500;
   color: var(--primary-shade);
 }
@@ -93,6 +96,10 @@ p {
 .btn--primary {
   color: #fff;
   background-color: var(--primary-main);
+  transition: background-color 0.25s;
+}
+.btn--primary:hover {
+  background-color: var(--primary-shade);
 }
 .btn--secondary {
   color: #333;
