@@ -1,18 +1,27 @@
 .testimonials-section {
   background-color: var(--primary-hint);
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  /* gap: 1rem; */
 }
 .testimonials-text {
+  padding: 9.6rem;
+  margin: auto 0;
 }
 .testimonials-text-grid {
-  gap: 2.4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 4.8rem;
+  column-gap: 8rem;
 }
 .testimonials-gallery {
+  padding: 1.6rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: center;
   align-content: center;
-  gap: 1rem;
+  gap: 1.6rem;
 }
 
 .gallery-item {

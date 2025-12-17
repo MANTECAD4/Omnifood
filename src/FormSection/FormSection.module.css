@@ -27,6 +27,10 @@
   column-gap: 3.6rem;
   row-gap: 2.4rem;
 }
+
+.input-label {
+  margin-bottom: 1rem;
+}
 .cta-form-field {
   display: flex;
   flex-direction: column;

@@ -8,7 +8,7 @@ import styles from "./ExtraFeaturesSection.module.css";
 import { MiniCard } from "./MiniCard/MiniCard";
 export const ExtraFeaturesSection = () => {
   return (
-    <div className={`grid grid--4-cols`}>
+    <div className={`${styles.features}`}>
       {extraFeatures.map((feature) => (
         <MiniCard key={feature.label} {...feature} />
       ))}

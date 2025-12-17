@@ -1,10 +1,11 @@
 .feature-title {
   font-size: 2.4rem;
   font-weight: 700;
-  margin: 2.4rem 0 1.2rem 0;
+  margin: 2.4rem 0 1.6rem 0;
 }
 .feature-description {
   margin: 0;
+  font-size: 1.8rem;
 }
 .feature-icon {
   /* background-color: red; */

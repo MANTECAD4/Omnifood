@@ -2,32 +2,28 @@ import { TestimonialMiniCard } from "./TestimonialMiniCard/TestimonialMiniCard";
 import styles from "./TestimonialsSection.module.css";
 export const TestimonialsSection = () => {
   return (
-    <div className={styles["testimonials-section"]}>
-      <div className={`section-content-container grid grid--2-cols`}>
-        <div className={styles["testimonials-text"]}>
-          <p className="subheader">Testimonials</p>
-          <h2 className="header-2">Once you try it, you can't go back</h2>
-          <div
-            className={`${styles["testimonials-text-grid"]} grid grid--2-cols`}
-          >
-            {testimonials.map((testimonial) => (
-              <TestimonialMiniCard
-                key={testimonial.clientName}
-                {...testimonial}
-              />
-            ))}
-          </div>
-        </div>
-
-        <div className={`${styles["testimonials-gallery"]}`}>
-          {images.map((image) => (
-            <div key={image} className={styles["gallery-item"]}>
-              <img src={`img/gallery/${image}`} alt="Meal Picture" />
-            </div>
+    <section className={styles["testimonials-section"]}>
+      <div className={styles["testimonials-text"]}>
+        <p className="subheader">Testimonials</p>
+        <h2 className="header-2">Once you try it, you can't go back</h2>
+        <div className={`${styles["testimonials-text-grid"]}`}>
+          {testimonials.map((testimonial) => (
+            <TestimonialMiniCard
+              key={testimonial.clientName}
+              {...testimonial}
+            />
           ))}
         </div>
       </div>
-    </div>
+
+      <div className={`${styles["testimonials-gallery"]}`}>
+        {images.map((image) => (
+          <figure key={image} className={styles["gallery-item"]}>
+            <img src={`img/gallery/${image}`} alt="Meal Picture" />
+          </figure>
+        ))}
+      </div>
+    </section>
   );
 };
 

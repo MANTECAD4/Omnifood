@@ -11,14 +11,14 @@ export const TestimonialMiniCard = ({
   review,
 }: Props) => {
   return (
-    <div className={`${styles["testimonial-card"]}`}>
+    <figure className={`${styles["testimonial-card"]}`}>
       <img
         className={styles["testimonial-picture"]}
         src={`img/customers/${profilePicture}`}
         alt={"Client picture"}
       />
-      <p>{review}</p>
+      <blockquote className={styles["testimonial-text"]}>{review}</blockquote>
       <span className={styles["testimonial-name"]}>- {clientName}</span>
-    </div>
+    </figure>
   );
 };

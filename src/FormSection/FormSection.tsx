@@ -13,7 +13,9 @@ export const FormSection = () => {
         </p>
         <form className={styles["cta-form"]}>
           <div className={styles["cta-form-field"]}>
-            <label htmlFor="fullName">Full name</label>
+            <label className={styles["input-label"]} htmlFor="fullName">
+              Full name
+            </label>
             <input
               className={styles["cta-form-input"]}
               id="fullName"
@@ -23,7 +25,9 @@ export const FormSection = () => {
             />
           </div>
           <div className={styles["cta-form-field"]}>
-            <label htmlFor="email">Email addres</label>
+            <label className={styles["input-label"]} htmlFor="email">
+              Email address
+            </label>
             <input
               className={styles["cta-form-input"]}
               id="email"
@@ -32,7 +36,9 @@ export const FormSection = () => {
             />
           </div>
           <div className={styles["cta-form-field"]}>
-            <label htmlFor="">Where did you hear from us?</label>
+            <label className={styles["input-label"]} htmlFor="">
+              Where did you hear from us?
+            </label>
             <select
               id="fullName"
               name="fullName"
