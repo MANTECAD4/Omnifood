@@ -5,37 +5,35 @@
   /* Se usa porcentaje para respetar el fontsize establecido por el usuario. SI lo aumenta, aumentan los tamaños*/
 
   font-size: 62.5%;
-  --fontsize-10: 1px;
-  --fontsize-12: 12px;
-  --fontsize-14: 14px;
-  --fontsize-16: 16px;
-  --fontsize-18: 18px;
-  --fontsize-20: 2px;
-  --fontsize-24: 24px;
-  --fontsize-30: 3px;
-  --fontsize-36: 36px;
-  --fontsize-44: 44px;
-  --fontsize-52: 52px;
-  --fontsize-62: 62px;
-  --fontsize-74: 74px;
-  --fontsize-86: 86px;
-  --fontsize-98: 98px;
   --primary-main: #e67e22;
   --primary-hint: #fdf2e9;
+  --box-shadow-1: rgba(230, 126, 34, 0.5);
   --primary-shade: #cf711f;
   --border-radius-1: 10px;
   --fade-down: fadeDown 1s ease infinite;
-  --shadow-1: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+  --shadow-1: rgba(78, 52, 52, 0.09) 0px 3px 12px;
   --shadow-2: rgba(17, 17, 26, 0.1) 0px 4px 16px,
     rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
   --shadow-3: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  --outline-main: 8px solid var(--primary-main);
+  --outline-hint: 8px solid var(--primary-hint);
+  --outline-shade: 8px solid var(--primary-shade);
 }
+
 * {
   box-sizing: border-box;
-  line-height: 1;
   margin: 0;
   padding: 0;
+
+  line-height: 1;
 }
+
+*:focus-visible {
+  outline: var(--outline-shade);
+  border-radius: var(--border-radius-1);
+}
+
 body {
   font-family: "Rubik", sans-serif;
   font-size: 1.6rem;
@@ -45,7 +43,7 @@ p {
   font-size: 2rem;
   line-height: 1.6;
 }
-.section-content-container {
+.section-container {
   max-width: 120rem;
   margin: 0 auto;
   padding: 9.6rem 3.6rem;
@@ -83,23 +81,32 @@ p {
   font-weight: 500;
   color: var(--primary-shade);
 }
-.btn {
-  cursor: pointer;
+.btn,
+.btn:link,
+.btn:visited {
   padding: 1.6rem 3.2rem;
   border: none;
+  border-radius: var(--border-radius-1);
+
   font-family: "Rubik", sans-serif;
   font-weight: 600;
   font-size: 2rem;
   text-transform: capitalize;
-  border-radius: var(--border-radius-1);
+
+  cursor: pointer;
 }
+
 .btn--primary {
   color: #fff;
   background-color: var(--primary-main);
   transition: background-color 0.25s;
 }
-.btn--primary:hover {
+.btn--primary:hover,
+.btn--primary:active {
   background-color: var(--primary-shade);
+}
+.btn--primary:focus-visible {
+  outline: var(--outline-shade);
 }
 .btn--secondary {
   color: #333;

@@ -12,14 +12,15 @@ export const App = () => {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Featured />
-      <HowSection />
-      <MealsSection />
-      <TestimonialsSection />
-      <PricingSection />
-      <FormSection />
-      <hr style={{ border: "1px solid rgba(1,1,1,0.1)" }} />
+      <main>
+        <Hero />
+        <Featured />
+        <HowSection />
+        <MealsSection />
+        <TestimonialsSection />
+        <PricingSection />
+        <FormSection />
+      </main>
       <FooterSection />
     </>
   );

@@ -7,9 +7,9 @@ const links = [
 ];
 export const Navbar = () => {
   return (
-    <header className={styles["hero-header"]}>
+    <header className={styles["header"]}>
       <img className={styles.logo} src="img/omnifood-logo.png" alt="Logo" />
-      <nav className={styles.navbar}>
+      <nav>
         <ul className={styles["nav-link-list"]}>
           {links.map(({ href, label }) => (
             <li key={label}>

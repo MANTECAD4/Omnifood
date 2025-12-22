@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./HowSection.module.css";
 export const HowSection = () => {
   return (
-    <div className={`section-content-container`}>
+    <div className={`section-container`}>
       <p className={"subheader"}>How it works</p>
       <h2 className={"header-2"}>
         Your daily dose of health in 3 simple steps

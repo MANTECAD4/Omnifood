@@ -4,7 +4,7 @@ import styles from "./PricingSection.module.css";
 import { ExtraFeaturesSection } from "../ExtraFeaturesSection/ExtraFeaturesSection";
 export const PricingSection = () => {
   return (
-    <section className={`section-content-container`}>
+    <section className={`section-container`}>
       <p className="subheader">Pricing</p>
       <h2 className="header-2">Eating well without breaking the bank</h2>
       <div className={styles["cards-container"]}>

@@ -2,7 +2,7 @@ import { MealCard } from "./MealCard/MealCard";
 import styles from "./MealsSection.module.css";
 export const MealsSection = () => {
   return (
-    <div className={`section-content-container ${styles["meals-section"]}`}>
+    <div className={`section-container ${styles["meals-section"]}`}>
       <p className={`subheader`}>Meals</p>
       <h2 className={`header-2`}>Omnifood AI chooses from 5,000+ recipes</h2>
       <div className={`${styles["cards-container"]}`}>

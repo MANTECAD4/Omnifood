@@ -1,7 +1,8 @@
 .footer {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
   gap: 6.4rem;
+  border-top: 1px solid #eee;
 }
 
 .footer-col {
@@ -17,6 +18,17 @@
   display: flex;
   gap: 2.4rem;
 }
+
+.social-media-link:link,
+.social-media-link:visited {
+  text-decoration: none;
+  color: #333;
+}
+
+.social-media-link:focus-visible {
+  border-radius: 2px;
+}
+
 .social-media-logo {
   height: 2.4rem;
   width: 2.4rem;
@@ -28,22 +40,28 @@
   margin-bottom: 2.4rem;
 }
 
-.footer-text:link,
-.footer-text:visited {
+.link-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
   font-size: 1.6rem;
   line-height: 1.25;
-  color: #666;
+  color: #767676;
   text-decoration: none;
-  margin: 1rem 0;
   transition: color 0.25s;
 }
 
-.footer-text:hover {
+.footer-link:hover {
   color: #333;
 }
 
 .copyright {
   margin-top: auto;
   font-size: 1.4rem;
-  line-height: 1.25;
+  line-height: 1.6;
 }

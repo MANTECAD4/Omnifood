@@ -5,12 +5,12 @@ import { IonIcon } from "@ionic/react";
 export const Hero = () => {
   return (
     <section className={styles["hero-section"]}>
-      <div className={`${styles["hero-content"]} `}>
-        <div className={styles["hero-text-content"]}>
-          <h1 className={styles["hero-header-1"]}>
+      <div className={`${styles["content"]} `}>
+        <div className={styles["text-content"]}>
+          <h1 className={styles["header"]}>
             A healthy meal delivered to your door, every single day
           </h1>
-          <p className={styles["hero-description"]}>
+          <p className={styles["description"]}>
             The smart 365-days-per-year food subscription that will make you eat
             healthy again. Tailored to your personal tastes and nutritional
             needs.
@@ -57,9 +57,7 @@ export const Hero = () => {
               />
             </div>
             <p className={styles["meals-delivered-label"]}>
-              <span className={styles["meals-delivered-counter"]}>
-                250,000+
-              </span>{" "}
+              <span className={styles["meals-delivered-count"]}>250,000+</span>{" "}
               meals delivered last year!
             </p>
           </div>

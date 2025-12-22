@@ -3,8 +3,8 @@ import styles from "./FooterSection.module.css";
 import { logoFacebook, logoInstagram, logoTwitter } from "ionicons/icons";
 export const FooterSection = () => {
   return (
-    <section>
-      <div className={`${styles["footer"]} section-content-container`}>
+    <footer>
+      <div className={`${styles["footer"]} section-container`}>
         <div className={styles["footer-col"]}>
           <img
             src={"img/omnifood-logo.png"}
@@ -12,18 +12,24 @@ export const FooterSection = () => {
             alt="Omnifood logo"
           />
           <div className={styles["social-media"]}>
-            <IonIcon
-              className={styles["social-media-logo"]}
-              icon={logoInstagram}
-            />
-            <IonIcon
-              className={styles["social-media-logo"]}
-              icon={logoFacebook}
-            />
-            <IonIcon
-              className={styles["social-media-logo"]}
-              icon={logoTwitter}
-            />
+            <a href="#" className={styles["social-media-link"]}>
+              <IonIcon
+                className={styles["social-media-logo"]}
+                icon={logoInstagram}
+              />
+            </a>
+            <a href="#" className={styles["social-media-link"]}>
+              <IonIcon
+                className={styles["social-media-logo"]}
+                icon={logoFacebook}
+              />
+            </a>
+            <a href="#" className={styles["social-media-link"]}>
+              <IonIcon
+                className={styles["social-media-logo"]}
+                icon={logoTwitter}
+              />
+            </a>
           </div>
           <p className={`${styles.copyright}`}>
             Copyright © 2025 by Omnifood, Inc. All rights reserved.
@@ -32,15 +38,19 @@ export const FooterSection = () => {
         {linkCols.map(({ title, links }) => (
           <div className={styles["footer-col"]} key={title}>
             <p className={styles["footer-heading"]}>{title}</p>
-            {links.map((link) => (
-              <a key={link} href="#" className={styles["footer-text"]}>
-                {link}
-              </a>
-            ))}
+            <ul className={styles["link-list"]}>
+              {links.map((link) => (
+                <li key={link}>
+                  <a href="#" className={styles["footer-link"]}>
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
-    </section>
+    </footer>
   );
 };
 
