@@ -1,14 +1,11 @@
 .hero-section {
-  display: flex;
-  align-items: center;
-
   padding: 4.8rem 0 9.6rem 0;
-
   background-color: var(--primary-hint);
 }
 
 .content {
-  display: flex;
+  display: grid;
+  grid-template-columns: 50fr 48fr;
   gap: 9.6rem;
 
   margin: 0 auto;
@@ -19,10 +16,12 @@
 
 .text-content {
   margin: auto 0;
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
-.header {
+.heading {
   color: #333;
   font-size: 5.2rem;
   font-weight: 700;
@@ -95,11 +94,43 @@
 }
 
 .hero-images-content {
-  position: relative;
-
-  width: 50%;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-img {
   width: 100%;
+}
+
+@media (max-width: 84em) {
+  .content {
+    max-width: 120rem;
+    gap: 4.8rem;
+  }
+  .heading {
+    font-size: 4.4rem;
+  }
+}
+
+@media only screen and (max-width: 60em) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 6.4rem;
+  }
+
+  .text-content {
+    align-items: center;
+  }
+
+  .heading,
+  .description {
+    text-align: center;
+  }
+
+  .meals-delivered {
+    margin-top: 3.2rem;
+  }
+  .hero-img {
+    width: 55%;
+  }
 }

@@ -7,7 +7,7 @@ export const Hero = () => {
     <section className={styles["hero-section"]}>
       <div className={`${styles["content"]} `}>
         <div className={styles["text-content"]}>
-          <h1 className={styles["header"]}>
+          <h1 className={styles["heading"]}>
             A healthy meal delivered to your door, every single day
           </h1>
           <p className={styles["description"]}>
@@ -15,13 +15,18 @@ export const Hero = () => {
             healthy again. Tailored to your personal tastes and nutritional
             needs.
           </p>
-          <button className={"btn btn--primary"}>Start eating well</button>
-          <button
-            className={`${styles["hero-btn-secondary"]} btn btn--secondary`}
-          >
-            Learn more
-            <IonIcon icon={arrowDownOutline} className={styles["arrow-down"]} />
-          </button>
+          <div>
+            <button className={"btn btn--primary"}>Start eating well</button>
+            <button
+              className={`${styles["hero-btn-secondary"]} btn btn--secondary`}
+            >
+              Learn more
+              <IonIcon
+                icon={arrowDownOutline}
+                className={styles["arrow-down"]}
+              />
+            </button>
+          </div>
 
           <div className={styles["meals-delivered"]}>
             <div className={styles["avatar-group"]}>
