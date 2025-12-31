@@ -9,8 +9,10 @@ export const MealsSection = () => {
         {mealsInfo.map((meal) => (
           <MealCard key={meal.mealName} {...meal} />
         ))}
-        <div>
-          <h3 className={`header-3`}>Works with any diet:</h3>
+        <div className={styles.diets}>
+          <h3 className={`header-3 ${styles["diets-heading"]}`}>
+            Works with any diet:
+          </h3>
           <ul className={styles["diets-list"]}>
             {dietsNames.map((diet) => (
               <li key={diet} className={styles["diet-item"]}>

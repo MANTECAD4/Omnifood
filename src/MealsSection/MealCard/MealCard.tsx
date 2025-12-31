@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { CSSProperties, FC } from "react";
 import styles from "./MealCard.module.css";
 
 type Props = {
@@ -8,6 +8,7 @@ type Props = {
   numCalories: number;
   nutriScore: number;
   rating: { score: number; numReviews: number };
+  extraStyles?: CSSProperties;
 };
 
 const dietColors: Record<string, string> = {
