@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./HowSection.module.css";
 export const HowSection = () => {
   return (
@@ -8,31 +7,20 @@ export const HowSection = () => {
         Your daily dose of health in 3 simple steps
       </h2>
       <div className={styles["steps-list"]}>
-        {steps.map(({ description, label, imgName }, index) => {
-          return index % 2 === 0 ? (
-            <React.Fragment key={label}>
-              <div className={styles["step-info"]}>
-                <span className={styles["step-number"]}>{`0${index + 1}`}</span>
-                <h3 className={`header-3`}>{label}</h3>
-                <p>{description}</p>
-              </div>
-              <div className={styles["step-img"]}>
+        {steps.map(({ description, label, imgName }, index) => (
+          <div className={styles.step} key={label}>
+            <div className={styles["step-info"]}>
+              <span className={styles["step-number"]}>{`0${index + 1}`}</span>
+              <h3 className={`header-3`}>{label}</h3>
+              <p>{description}</p>
+            </div>
+            <div className={styles["step-media"]}>
+              <span className={styles["img-decoration"]}>
                 <img alt={imgName} src={`img/app/${imgName}.png`} />
-              </div>
-            </React.Fragment>
-          ) : (
-            <React.Fragment key={label}>
-              <div className={styles["step-img"]}>
-                <img alt={imgName} src={`img/app/${imgName}.png`} />
-              </div>
-              <div className={styles["step-info"]}>
-                <span className={styles["step-number"]}>{`0${index + 1}`}</span>
-                <h3 className={`header-3`}>{label}</h3>
-                <p>{description}</p>
-              </div>
-            </React.Fragment>
-          );
-        })}
+              </span>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ const companyNames = [
 ];
 export const Featured = () => {
   return (
-    <div className={`${styles["logos-section"]} section-content-container`}>
+    <div className={`${styles["logos-section"]} section-container`}>
       <h2 className={`${styles["heading-logos"]}`}>As featured in</h2>
       <div className={styles["logos-container"]}>
         {companyNames.map((company) => (

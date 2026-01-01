@@ -1,8 +1,23 @@
 .steps-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 9.6rem;
+}
+
+.step {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  row-gap: 6.4rem;
-  column-gap: 3.2rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "left right";
+  gap: 6.4rem;
+}
+
+.step:nth-child(odd) .step-info,
+.step:nth-child(even) .step-media {
+  grid-area: left;
+}
+.step:nth-child(even) .step-info,
+.step:nth-child(odd) .step-media {
+  grid-area: right;
 }
 
 .step-number {
@@ -20,35 +35,101 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* margin: auto 0; */
 }
-.step-img {
+.step-media {
+  display: flex;
+  justify-content: center;
+}
+.img-decoration {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   z-index: 3;
-}
-.step-img img {
   width: 35%;
-  /* max-width: 20rem; */
 }
-.step-img::before {
+.img-decoration img {
+  width: 100%;
+}
+.img-decoration::before {
   content: "";
   background-color: #fdf2e9;
   position: absolute;
   z-index: -2;
-  width: 60%;
-  padding-bottom: 60%;
-  /* width: 35rem; */
+  width: calc(100% * 1.7142);
+  padding-bottom: calc(100% * 1.7142);
   border-radius: 50%;
 }
-.step-img::after {
+.img-decoration::after {
   content: "";
   background-color: #fae5d3;
   position: absolute;
   z-index: -1;
-  width: 45%;
-  padding-bottom: 45%;
+  width: calc(100% * 1.2857);
+  padding-bottom: calc(100% * 1.2857);
   border-radius: 50%;
+}
+
+/* 1360 px - SMALL LAPTOPS */
+@media (max-width: 85em) {
+}
+/* 1200 px - LANDSCAPE TABLETS */
+@media (max-width: 75em) {
+  .step {
+    column-gap: 3.2rem;
+  }
+  .steps-list {
+    row-gap: 6.4rem;
+  }
+}
+
+/* 960 px - TABLETS */
+@media (max-width: 60em) {
+  .step:nth-child(odd) {
+    grid-template-columns: 60fr 40fr;
+  }
+  .step:nth-child(even) {
+    grid-template-columns: 40fr 60fr;
+  }
+  .img-decoration {
+    width: 45%;
+  }
+}
+
+/* 720 px - TABLETS */
+@media (max-width: 45em) {
+  .step:nth-child(odd) {
+    grid-template-columns: 65fr 35fr;
+  }
+  .step:nth-child(even) {
+    grid-template-columns: 35fr 65fr;
+  }
+  .img-decoration {
+    width: 55%;
+  }
+}
+
+/* 560 px - PHONES */
+@media (max-width: 35em) {
+  .step {
+    grid-template-columns: 1fr !important;
+    grid-template-areas:
+      "left"
+      "right" !important;
+  }
+  .step-media {
+    grid-area: left !important;
+  }
+  .img-decoration {
+    width: 30%;
+  }
+  .step-info {
+    grid-area: right !important;
+  }
+}
+/* 480 px - SMALL PHONES */
+@media only screen and (max-width: 30em) {
+  .img-decoration {
+    width: 30%;
+  }
 }
