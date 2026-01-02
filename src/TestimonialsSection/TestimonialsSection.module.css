@@ -36,3 +36,43 @@
 .gallery-item:hover img {
   transform: scale(1.1);
 }
+
+/* 1360 px - SMALL LAPTOPS */
+@media only screen and (max-width: 85em) {
+  .testimonials-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+  .testimonials-text {
+    padding: 4.8rem;
+  }
+}
+
+/* 1200 px - LANDSCAPE TABLETS */
+@media only screen and (max-width: 75em) {
+  .testimonials-text {
+    padding: 3.6rem;
+  }
+}
+
+/* 960 px - TABLETS */
+@media only screen and (max-width: 60em) {
+  .testimonials-section {
+    grid-template-columns: 1fr;
+  }
+  .testimonials-text {
+    padding: 7.6rem 4.8rem;
+  }
+  .testimonials-gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+/* 720 px - TABLETS */
+@media only screen and (max-width: 45em) {
+}
+/* 560 px - PHONES */
+@media only screen and (max-width: 35em) {
+}
+
+/* 480 px - SMALL PHONES */
+@media only screen and (max-width: 30em) {
+}

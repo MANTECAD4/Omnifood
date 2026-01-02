@@ -39,13 +39,13 @@ export const FormSection = () => {
               />
             </div>
             <div className={styles["cta-form-field"]}>
-              <label className={styles["input-label"]} htmlFor="">
+              <label className={styles["input-label"]} htmlFor="source">
                 Where did you hear from us?
               </label>
               <select
                 required
-                id="fullName"
-                name="fullName"
+                id="source"
+                name="source"
                 className={styles["cta-form-input"]}
               >
                 <option value="">Please choose an option</option>

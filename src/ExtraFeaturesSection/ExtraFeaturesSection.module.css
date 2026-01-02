@@ -3,3 +3,28 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 4.8rem;
 }
+
+/* 1360 px - SMALL LAPTOPS */
+@media only screen and (max-width: 85em) {
+}
+
+/* 1200 px - LANDSCAPE TABLETS */
+@media only screen and (max-width: 75em) {
+}
+
+/* 960 px - TABLETS */
+@media only screen and (max-width: 60em) {
+  .features {
+    gap: 2.8rem;
+  }
+}
+/* 720 px - TABLETS */
+@media only screen and (max-width: 45em) {
+}
+/* 560 px - PHONES */
+@media only screen and (max-width: 35em) {
+}
+
+/* 480 px - SMALL PHONES */
+@media only screen and (max-width: 30em) {
+}

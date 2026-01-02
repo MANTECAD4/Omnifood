@@ -24,12 +24,8 @@
   width: 5.2rem;
 }
 
-.menu-btn:focus {
-  /* outline: var(--outline-main); */
-}
-
 .menu-btn-bar {
-  border-top: 3px solid #333;
+  border-top: 0.4rem solid #333;
   width: 100%;
 }
 
@@ -130,8 +126,11 @@
 /* 720 px - TABLETS */
 @media (max-width: 45em) {
 }
-/* 720 px - TABLETS */
+/* 560 px - PHONES */
 @media (max-width: 35em) {
+}
+/* 480 px - SMALL PHONES */
+@media (max-width: 30em) {
 }
 
 /* ANIMACIONES */

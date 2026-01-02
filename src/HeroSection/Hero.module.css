@@ -74,8 +74,8 @@
   border-radius: 50%;
   border: 3px solid #fff;
 
-  width: 4.8rem;
-  height: 4.8rem;
+  width: 5.2rem;
+  height: 5.2rem;
 }
 
 .avatar:not(:first-child) {
@@ -102,7 +102,8 @@
   width: 100%;
 }
 
-@media (max-width: 84em) {
+/* 1360 px - SMALL LAPTOPS */
+@media only screen and (max-width: 85em) {
   .content {
     max-width: 120rem;
     gap: 4.8rem;
@@ -112,6 +113,11 @@
   }
 }
 
+/* 1200 px - LANDSCAPE TABLETS */
+@media only screen and (max-width: 75em) {
+}
+
+/* 960 px - TABLETS */
 @media only screen and (max-width: 60em) {
   .content {
     grid-template-columns: 1fr;
@@ -133,4 +139,14 @@
   .hero-img {
     width: 55%;
   }
+}
+/* 720 px - TABLETS */
+@media only screen and (max-width: 45em) {
+}
+/* 560 px - PHONES */
+@media only screen and (max-width: 35em) {
+}
+
+/* 480 px - SMALL PHONES */
+@media only screen and (max-width: 30em) {
 }

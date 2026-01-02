@@ -4,6 +4,20 @@
   /* 1rem -> 10px = Calculos más sencillos */
   /* Se usa porcentaje para respetar el fontsize establecido por el usuario. SI lo aumenta, aumentan los tamaños*/
 
+  /* MEDIDAS
+  
+  FONT-SIZE
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+  
+  SPACING
+  2/ 4 / 8 / 12 / 16 /  24 / 32 / 48 / 64 / 80 / 96 / 128
+
+
+  QUERIES
+  84em / 75em / 60em /  44em / 34em
+
+  */
+
   font-size: 62.5%;
   --primary-main: #e67e22;
   --primary-hint: #fdf2e9;
@@ -42,4 +56,40 @@ body {
 p {
   font-size: 2rem;
   line-height: 1.6;
+}
+
+/* 1360 px - SMALL LAPTOPS */
+@media (max-width: 85em) {
+}
+/* 1200 px - LANDSCAPE TABLETS */
+@media (max-width: 75em) {
+  :root {
+    font-size: 56.25%;
+  }
+}
+
+/* 960 px - TABLETS */
+@media (max-width: 60em) {
+  :root {
+    font-size: 50%;
+  }
+}
+
+/* 720 px - TABLETS */
+@media (max-width: 45em) {
+  :root {
+    font-size: 40.62%;
+  }
+}
+/* 560 px - PHONES */
+@media (max-width: 35em) {
+  :root {
+    /* font-size: 40.62%; */
+  }
+}
+/* 480 px - SMALL PHONES */
+@media (max-width: 30em) {
+  :root {
+    font-size: 37.5%;
+  }
 }
