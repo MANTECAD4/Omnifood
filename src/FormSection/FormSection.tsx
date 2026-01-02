@@ -63,9 +63,7 @@ export const FormSection = () => {
           className={styles["cta-image"]}
           role="img"
           aria-label="Woman enjoying food"
-        >
-          {/* <img src="img/eating.jpg" alt="Person eating" /> */}
-        </div>
+        ></div>
       </div>
     </section>
   );

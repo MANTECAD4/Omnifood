@@ -16,6 +16,7 @@
 @media only screen and (max-width: 60em) {
   .features {
     gap: 2.8rem;
+    grid-template-columns: 1fr 1fr;
   }
 }
 /* 720 px - TABLETS */
@@ -23,6 +24,9 @@
 }
 /* 560 px - PHONES */
 @media only screen and (max-width: 35em) {
+  .features {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* 480 px - SMALL PHONES */

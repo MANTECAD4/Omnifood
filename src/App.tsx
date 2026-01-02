@@ -17,11 +17,11 @@ export const App = () => {
         <Featured />
         <HowSection />
         <MealsSection />
-        {/* <TestimonialsSection /> */}
-        {/* <PricingSection /> */}
-        {/* <FormSection /> */}
+        <TestimonialsSection />
+        <PricingSection />
+        <FormSection />
       </main>
-      {/* <FooterSection /> */}
+      <FooterSection />
     </>
   );
 };

@@ -39,6 +39,9 @@
 
 /* 1360 px - SMALL LAPTOPS */
 @media only screen and (max-width: 85em) {
+  .testimonials-section {
+    grid-template-columns: 60fr 40fr;
+  }
   .testimonials-gallery {
     grid-template-columns: 1fr 1fr;
   }
@@ -68,11 +71,23 @@
 }
 /* 720 px - TABLETS */
 @media only screen and (max-width: 45em) {
+  .testimonials-gallery {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 /* 560 px - PHONES */
 @media only screen and (max-width: 35em) {
+  .testimonials-text-grid {
+    grid-template-columns: 1fr;
+  }
+  .testimonials-gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /* 480 px - SMALL PHONES */
 @media only screen and (max-width: 30em) {
+  .testimonials-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

@@ -1,6 +1,8 @@
 .cards-container {
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3.2rem;
 }
 
 .card {
@@ -10,6 +12,8 @@
   flex-direction: column;
   align-items: center;
   border-radius: var(--border-radius-1);
+  width: 100%;
+  max-width: 42rem;
 }
 .card--complete {
   background-color: var(--primary-hint);
@@ -19,7 +23,6 @@
 .card--complete::before {
   content: "BEST VALUE";
   font-size: 1.4rem;
-  /* line-height: 1.5; */
   padding: 2.5px 0;
   font-weight: 700;
   width: 20rem;
@@ -97,12 +100,18 @@
 
 /* 960 px - TABLETS */
 @media only screen and (max-width: 60em) {
+  /* .cards-container {
+    justify-content: space-between;
+  } */
 }
 /* 720 px - TABLETS */
 @media only screen and (max-width: 45em) {
 }
 /* 560 px - PHONES */
 @media only screen and (max-width: 35em) {
+  .cards-container {
+    flex-direction: column;
+  }
 }
 
 /* 480 px - SMALL PHONES */
