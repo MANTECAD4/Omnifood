@@ -1,7 +1,7 @@
 import styles from "./HowSection.module.css";
 export const HowSection = () => {
   return (
-    <div className={`section-container`}>
+    <section id="how-section" className={`section-container`}>
       <p className={"subheader"}>How it works</p>
       <h2 className={"header-2"}>
         Your daily dose of health in 3 simple steps
@@ -22,7 +22,7 @@ export const HowSection = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

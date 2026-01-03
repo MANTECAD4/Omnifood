@@ -1,0 +1,134 @@
+.menu-btn {
+  display: none;
+  position: absolute;
+  top: 2.4rem;
+  right: 3.8rem;
+  z-index: 200;
+
+  border: none;
+
+  background-color: transparent;
+  height: 3.6rem;
+  width: 3.2rem;
+
+  cursor: pointer;
+}
+
+.menu-btn-bar {
+  border-top: 0.4rem solid #333;
+  width: 100%;
+}
+
+.menu-bar-1,
+.menu-bar-2,
+.menu-bar-3 {
+  transform-origin: left;
+  animation-duration: 0.25s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-bar-1--open {
+  animation-name: rotate-down;
+}
+.menu-bar-1--closed {
+  animation-name: rotate-down-reverse;
+}
+.menu-bar-2--open {
+  animation-name: slide-out;
+}
+.menu-bar-2--closed {
+  animation-name: slide-in;
+}
+.menu-bar-3--open {
+  animation-name: rotate-up;
+}
+.menu-bar-3--closed {
+  animation-name: rotate-up-reverse;
+}
+
+/* ANIMACIONES */
+@keyframes rotate-down {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    /* 1.187 */
+    transform: rotate(40deg) scaleX(1.21);
+  }
+}
+@keyframes rotate-down-reverse {
+  0% {
+    transform: rotate(40deg) scaleX(1.21);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes rotate-up {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(-40deg) scaleX(1.21);
+  }
+}
+@keyframes rotate-up-reverse {
+  0% {
+    transform: rotate(-40deg) scaleX(1.21);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+}
+@keyframes slide-in {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+/* 1360 px - SMALL LAPTOPS */
+@media (max-width: 85em) {
+}
+/* 1200 px - LANDSCAPE TABLETS */
+@media (max-width: 75em) {
+}
+
+/* 960 px - TABLETS */
+@media (max-width: 60em) {
+  .menu-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+/* 720 px - TABLETS */
+@media (max-width: 45em) {
+}
+/* 560 px - PHONES */
+@media (max-width: 35em) {
+}
+/* 480 px - SMALL PHONES */
+@media (max-width: 30em) {
+}

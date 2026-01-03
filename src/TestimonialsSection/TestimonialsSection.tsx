@@ -2,7 +2,10 @@ import { TestimonialMiniCard } from "./TestimonialMiniCard/TestimonialMiniCard";
 import styles from "./TestimonialsSection.module.css";
 export const TestimonialsSection = () => {
   return (
-    <section className={styles["testimonials-section"]}>
+    <section
+      id="testimonials-section"
+      className={styles["testimonials-section"]}
+    >
       <div className={styles["testimonials-text"]}>
         <p className="subheader">Testimonials</p>
         <h2 className="header-2">Once you try it, you can't go back</h2>

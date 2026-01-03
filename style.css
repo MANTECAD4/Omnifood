@@ -34,7 +34,9 @@
   --outline-hint: 7px solid var(--primary-hint);
   --outline-shade: 7px solid var(--primary-shade);
 }
-
+html {
+  scroll-behavior: smooth;
+}
 * {
   box-sizing: border-box;
   margin: 0;

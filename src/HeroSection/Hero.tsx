@@ -16,8 +16,11 @@ export const Hero = () => {
             needs.
           </p>
           <div>
-            <button className={"btn btn--primary"}>Start eating well</button>
-            <button
+            <a href="#cta-section" className={"btn btn--primary"}>
+              Start eating well
+            </a>
+            <a
+              href="#how-section"
               className={`${styles["hero-btn-secondary"]} btn btn--secondary`}
             >
               Learn more
@@ -25,7 +28,7 @@ export const Hero = () => {
                 icon={arrowDownOutline}
                 className={styles["arrow-down"]}
               />
-            </button>
+            </a>
           </div>
 
           <div className={styles["meals-delivered"]}>

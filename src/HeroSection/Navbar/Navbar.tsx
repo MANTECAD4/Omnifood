@@ -1,43 +1,36 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { MobileNavButton } from "./MobileNav/MobileNavButton";
 import styles from "./Navbar.module.css";
+import { useMediaQuery } from "@uidotdev/usehooks";
 const links = [
-  { label: "How it works", href: "#" },
-  { label: "Meals", href: "#" },
-  { label: "Testimonials", href: "#" },
-  { label: "Pricing", href: "#" },
+  { label: "How it works", href: "#how-section" },
+  { label: "Meals", href: "#meals-section" },
+  { label: "Testimonials", href: "#testimonials-section" },
+  { label: "Pricing", href: "#pricing-section" },
 ];
 export const Navbar = () => {
+  const matchesMobileSize = useMediaQuery("(max-width: 60em)");
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuhidden, setIsMenuHidden] = useState(false);
+
+  useEffect(() => {
+    if (matchesMobileSize === false) setIsMenuOpen(false);
+  }, [matchesMobileSize, setIsMenuOpen]);
+
   return (
     <header className={styles["navbar"]}>
       <img className={styles.logo} src="img/omnifood-logo.png" alt="Logo" />
-      <button
-        className={`${styles["menu-btn"]}`}
-        onClick={() => setIsMenuOpen((prevState) => !prevState)}
+      <MobileNavButton isMenuOpen={isMenuOpen} toggleMenu={setIsMenuOpen} />
+      <nav
+        className={`${styles.navigation} ${
+          matchesMobileSize
+            ? `${styles["mobile-nav"]} ${
+                isMenuOpen ? styles["menu-open"] : styles["menu-closed"]
+              }`
+            : ""
+        }`}
       >
-        <div
-          className={`${styles["menu-btn-bar"]} ${styles["menu-bar-1"]} ${
-            isMenuOpen
-              ? styles["menu-bar-1--open"]
-              : styles["menu-bar-1--closed"]
-          }`}
-        />
-        <div
-          className={`${styles["menu-btn-bar"]} ${styles["menu-bar-2"]} ${
-            isMenuOpen
-              ? styles["menu-bar-2--open"]
-              : styles["menu-bar-2--closed"]
-          }`}
-        />
-        <div
-          className={`${styles["menu-btn-bar"]} ${styles["menu-bar-3"]} ${
-            isMenuOpen
-              ? styles["menu-bar-3--open"]
-              : styles["menu-bar-3--closed"]
-          }`}
-        />
-      </button>
-      <nav className={styles.navigation}>
         <ul className={styles["nav-link-list"]}>
           {links.map(({ href, label }) => (
             <li key={label}>
@@ -47,9 +40,12 @@ export const Navbar = () => {
             </li>
           ))}
           <li>
-            <button className={`${styles["nav-btn"]} btn btn--primary`}>
+            <a
+              href={"#cta-section"}
+              className={`${styles["nav-btn"]} btn btn--primary`}
+            >
               Try for free
-            </button>
+            </a>
           </li>
         </ul>
       </nav>

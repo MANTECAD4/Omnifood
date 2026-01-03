@@ -7,11 +7,13 @@ export const FooterSection = () => {
     <footer>
       <div className={`${styles["footer"]} section-container`}>
         <div className={styles["footer-col"]} style={{ gridArea: "logo" }}>
-          <img
-            src={"img/omnifood-logo.png"}
-            className={styles["footer-logo"]}
-            alt="Omnifood logo"
-          />
+          <a href="#">
+            <img
+              src={"img/omnifood-logo.png"}
+              className={styles["footer-logo"]}
+              alt="Omnifood logo"
+            />
+          </a>
           <div className={styles["social-media"]}>
             <a href="#" className={styles["social-media-link"]}>
               <IonIcon

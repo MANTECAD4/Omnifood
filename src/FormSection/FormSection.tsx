@@ -1,7 +1,7 @@
 import styles from "./FormSection.module.css";
 export const FormSection = () => {
   return (
-    <section className={styles["cta-container"]}>
+    <section id="cta-section" className={styles["cta-container"]}>
       <div className={`${styles.cta}`}>
         <div className={styles["cta-text-content"]}>
           <h2 className={`header-2 ${styles["cta-header"]}`}>
