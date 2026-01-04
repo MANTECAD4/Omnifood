@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { MobileNavButton } from "./MobileNav/MobileNavButton";
 import styles from "./Navbar.module.css";
 import { useMediaQuery } from "@uidotdev/usehooks";
@@ -8,18 +8,25 @@ const links = [
   { label: "Testimonials", href: "#testimonials-section" },
   { label: "Pricing", href: "#pricing-section" },
 ];
-export const Navbar = () => {
+
+type Props = {
+  enableSticky: boolean;
+};
+export const Navbar: FC<Props> = ({ enableSticky: isIntersecting }) => {
   const matchesMobileSize = useMediaQuery("(max-width: 60em)");
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMenuhidden, setIsMenuHidden] = useState(false);
 
   useEffect(() => {
     if (matchesMobileSize === false) setIsMenuOpen(false);
   }, [matchesMobileSize, setIsMenuOpen]);
 
   return (
-    <header className={styles["navbar"]}>
+    <header
+      className={`${styles["navbar"]} ${
+        isIntersecting ? styles["sticky-nav"] : ""
+      }`}
+    >
       <img className={styles.logo} src="img/omnifood-logo.png" alt="Logo" />
       <MobileNavButton isMenuOpen={isMenuOpen} toggleMenu={setIsMenuOpen} />
       <nav
@@ -34,7 +41,11 @@ export const Navbar = () => {
         <ul className={styles["nav-link-list"]}>
           {links.map(({ href, label }) => (
             <li key={label}>
-              <a href={href} className={styles.link}>
+              <a
+                href={href}
+                onClick={() => setIsMenuOpen(false)}
+                className={styles.link}
+              >
                 {label}
               </a>
             </li>
@@ -42,6 +53,7 @@ export const Navbar = () => {
           <li>
             <a
               href={"#cta-section"}
+              onClick={() => setIsMenuOpen(false)}
               className={`${styles["nav-btn"]} btn btn--primary`}
             >
               Try for free

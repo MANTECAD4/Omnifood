@@ -2,6 +2,9 @@
   padding: 4.8rem 0 9.6rem 0;
   background-color: var(--primary-hint);
 }
+.compesate-space {
+  padding-top: 14rem;
+}
 
 .content {
   display: grid;
