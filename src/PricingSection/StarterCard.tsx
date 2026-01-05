@@ -28,9 +28,12 @@ export const StarterCard = () => {
           <IonIcon className={styles["list-icon"]} icon={closeOutline} />
         </li>
       </ul>
-      <button className={`btn btn--primary ${styles["action-btn"]}`}>
+      <a
+        href="#cta-section"
+        className={`btn btn--primary ${styles["action-btn"]}`}
+      >
         Start eating well
-      </button>{" "}
+      </a>{" "}
     </div>
   );
 };

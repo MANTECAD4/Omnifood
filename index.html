@@ -2,7 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.png" />
+    <meta
+      name="description"
+      content="The smart 365-days-per-year food subscription that will make you eat healthy again. Tailored to your personal tastes and nutritional needs."
+    />
+    <link rel="icon" type="image/svg+xml" href="public/favicon.png" />
+    <link
+      rel="apple-touch-icon"
+      type="image/svg+xml"
+      href="public/favicon.png"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="general.css" />
     <link rel="stylesheet" href="queries.css" />
@@ -11,6 +20,11 @@
   </head>
   <body>
     <div id="root"></div>
+    <form name="sign-up" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="fullName" />
+      <input type="email" name="email" />
+      <select name="source"></select>
+    </form>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

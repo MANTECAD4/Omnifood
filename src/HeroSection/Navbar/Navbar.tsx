@@ -27,7 +27,9 @@ export const Navbar: FC<Props> = ({ enableSticky: isIntersecting }) => {
         isIntersecting ? styles["sticky-nav"] : ""
       }`}
     >
-      <img className={styles.logo} src="img/omnifood-logo.png" alt="Logo" />
+      <a href="#">
+        <img className={styles.logo} src="img/omnifood-logo.png" alt="Logo" />
+      </a>
       <MobileNavButton isMenuOpen={isMenuOpen} toggleMenu={setIsMenuOpen} />
       <nav
         className={`${styles.navigation} ${

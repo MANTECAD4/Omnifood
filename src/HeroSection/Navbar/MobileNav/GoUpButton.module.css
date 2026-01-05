@@ -1,0 +1,24 @@
+.go-up-btn:link,
+.go-up-btn:visited {
+  position: fixed;
+  bottom: 3.8rem;
+  right: 3.8rem;
+  z-index: 100;
+  padding: 1.8rem;
+  border: none;
+  background-color: var(--primary-main);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: var(--shadow-1);
+  transition: transform 0.25s ease;
+  transform: scale(0);
+}
+.arrow-up {
+  height: 3.2rem;
+  width: 3.2rem;
+  color: #fff;
+}
+.show-btn:link,
+.show-btn:visited {
+  transform: scale(1);
+}

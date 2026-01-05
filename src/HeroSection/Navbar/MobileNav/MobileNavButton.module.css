@@ -9,7 +9,7 @@
 
   background-color: transparent;
   height: 3.6rem;
-  width: 3.2rem;
+  width: 3.6rem;
 
   cursor: pointer;
 }
@@ -22,7 +22,7 @@
 .menu-bar-1,
 .menu-bar-2,
 .menu-bar-3 {
-  transform-origin: left;
+  /* transform-origin: left; */
   animation-duration: 0.25s;
   animation-timing-function: ease;
   animation-fill-mode: forwards;
@@ -52,36 +52,36 @@
 /* ANIMACIONES */
 @keyframes rotate-down {
   0% {
-    transform: rotate(0deg) scale(1);
+    transform: rotate(0deg);
   }
   100% {
     /* 1.187 */
-    transform: rotate(40deg) scaleX(1.21);
+    transform: translateY(1.225rem) rotate(40deg);
   }
 }
 @keyframes rotate-down-reverse {
   0% {
-    transform: rotate(40deg) scaleX(1.21);
+    transform: translateY(1.225rem) rotate(40deg);
   }
   100% {
-    transform: rotate(0deg) scale(1);
+    transform: rotate(0deg);
   }
 }
 
 @keyframes rotate-up {
   0% {
-    transform: rotate(0deg) scale(1);
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(-40deg) scaleX(1.21);
+    transform: translateY(-1.225rem) rotate(-40deg);
   }
 }
 @keyframes rotate-up-reverse {
   0% {
-    transform: rotate(-40deg) scaleX(1.21);
+    transform: translateY(-1.225rem) rotate(-40deg);
   }
   100% {
-    transform: rotate(0deg) scale(1);
+    transform: rotate(0deg);
   }
 }
 

@@ -29,9 +29,12 @@ export const CompleteCard = () => {
           Get access to latest recipes
         </li>
       </ul>
-      <button className={`btn btn--primary ${styles["action-btn"]}`}>
+      <a
+        href="#cta-section"
+        className={`btn btn--primary ${styles["action-btn"]}`}
+      >
         Start eating well
-      </button>
+      </a>
     </div>
   );
 };

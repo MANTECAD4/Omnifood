@@ -1,8 +1,9 @@
 import styles from "./Hero.module.css";
-import { arrowDownOutline } from "ionicons/icons";
+import { arrowDownOutline, checkmarkOutline, chevronUp } from "ionicons/icons";
 import { IonIcon } from "@ionic/react";
 import { Navbar } from "./Navbar/Navbar";
-import { useDebounce, useIntersectionObserver } from "@uidotdev/usehooks";
+import { useIntersectionObserver } from "@uidotdev/usehooks";
+import { GoUpButton } from "./Navbar/MobileNav/GoUpButton";
 
 export const Hero = () => {
   const [ref, entry] = useIntersectionObserver({
@@ -10,12 +11,13 @@ export const Hero = () => {
     threshold: 0,
     rootMargin: "0px",
   });
+  const isHeroNotIntersecting: boolean = !entry?.isIntersecting;
   return (
     <>
-      <Navbar enableSticky={!entry?.isIntersecting} />
+      <Navbar enableSticky={isHeroNotIntersecting} />
       <section
         className={`${styles["hero-section"]} ${
-          !entry?.isIntersecting ? styles["compesate-space"] : ""
+          isHeroNotIntersecting ? styles["compesate-space"] : ""
         }`}
         ref={ref}
       >
@@ -89,12 +91,13 @@ export const Hero = () => {
           <div className={styles["hero-images-content"]}>
             <img
               className={styles["hero-img"]}
-              src="img/hero.png"
+              src="img/hero.webp"
               alt="Gallery"
             />
           </div>
         </div>
       </section>
+      <GoUpButton isVisible={isHeroNotIntersecting} />
     </>
   );
 };
