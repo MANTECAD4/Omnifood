@@ -35,7 +35,9 @@ export const Navbar: FC<Props> = ({ enableSticky: isIntersecting }) => {
         className={`${styles.navigation} ${
           matchesMobileSize
             ? `${styles["mobile-nav"]} ${
-                isMenuOpen ? styles["menu-open"] : styles["menu-closed"]
+                isMenuOpen
+                  ? styles["menu-open"]
+                  : `${styles["menu-closed"]} ${styles["menu-hidden"]}`
               }`
             : ""
         }`}

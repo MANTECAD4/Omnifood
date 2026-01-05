@@ -3,6 +3,7 @@
   grid-template-areas: "logo contact account company resources";
   grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
   gap: 6.4rem;
+
   border-top: 1px solid #eee;
 }
 
@@ -12,8 +13,9 @@
   align-items: flex-start;
 }
 .footer-logo {
-  height: 2.4rem;
   margin-bottom: 3.2rem;
+
+  height: 2.4rem;
 }
 
 .social-media {
@@ -23,8 +25,8 @@
 
 .social-media-link:link,
 .social-media-link:visited {
-  text-decoration: none;
   color: #333;
+  text-decoration: none;
 }
 
 .social-media-link:focus-visible {
@@ -37,24 +39,27 @@
 }
 
 .footer-heading {
-  font-weight: 500;
-  font-size: 1.8rem;
   margin-bottom: 2.4rem;
+
+  font-size: 1.8rem;
+  font-weight: 500;
 }
 
 .link-list {
-  list-style: none;
   display: flex;
   flex-direction: column;
   row-gap: 2.4rem;
+
+  list-style: none;
 }
 
 .footer-link:link,
 .footer-link:visited {
   font-size: 1.6rem;
-  line-height: 1.25;
   color: #767676;
+  line-height: 1.25;
   text-decoration: none;
+
   transition: color 0.25s;
 }
 
@@ -64,6 +69,7 @@
 
 .copyright {
   margin-top: auto;
+
   font-size: 1.4rem;
   line-height: 1.6;
 }

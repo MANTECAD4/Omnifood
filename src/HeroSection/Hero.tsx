@@ -1,5 +1,5 @@
 import styles from "./Hero.module.css";
-import { arrowDownOutline, checkmarkOutline, chevronUp } from "ionicons/icons";
+import { arrowDownOutline } from "ionicons/icons";
 import { IonIcon } from "@ionic/react";
 import { Navbar } from "./Navbar/Navbar";
 import { useIntersectionObserver } from "@uidotdev/usehooks";

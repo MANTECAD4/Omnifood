@@ -1,45 +1,58 @@
 .cta-container {
   padding: 0 3.6rem;
 }
+
 .cta {
+  display: grid;
+  grid-template-columns: 66fr 33fr;
+  grid-template-areas: "text media";
+
+  margin: 4.8rem auto 9.8rem auto;
+  border-radius: 15px;
+  max-width: 115rem;
   background-image: linear-gradient(
     to right,
     var(--primary-main),
     var(--primary-hint)
   );
-  max-width: 115rem;
-  margin: 4.8rem auto 9.8rem auto;
-  display: grid;
-  grid-template-columns: 66fr 33fr;
-  grid-template-areas: "text media";
-  border-radius: 15px;
-  overflow: hidden;
+
   color: #45260a;
+
+  overflow: hidden;
   box-shadow: var(--shadow-2);
 }
+
 .cta-image {
+  grid-area: media;
+
+  padding-bottom: 65%;
+
+  width: 100%;
   background-image: linear-gradient(rgb(230, 126, 34, 0.26)),
     url("img/eating.jpg");
   background-size: cover;
   background-position: center;
-  grid-area: media;
-  width: 100%;
-  padding-bottom: 65%;
 }
 
 .cta-text-content {
-  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
   grid-area: text;
+
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
 }
+
 .cta-header {
   margin: 0;
+
   color: inherit;
 }
+
 .cta-paragraph {
   margin: 3.6rem 0;
+
   font-size: 1.8rem;
   line-height: 1.8;
 }
+
 .cta-form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -49,38 +62,55 @@
 
 .input-label {
   margin-bottom: 1.4rem;
+
   font-weight: 500;
 }
+
 .cta-form-field {
   display: flex;
   flex-direction: column;
 }
+
 .cta-form-input {
   padding: 1.6rem;
-  font-size: 1.8rem;
-  border-radius: 5px;
-  font-family: inherit;
   border: none;
+  border-radius: 5px;
+
+  font-family: inherit;
+  font-size: 1.8rem;
 }
+
+.cta-form-input:focus-visible,
+.cta-submit-btn:focus-visible {
+  box-shadow: var(--outline-3);
+}
+
 .cta-form-input::placeholder {
   color: #777;
 }
+
 .cta-submit-btn {
-  height: calc(1.8rem + 2 * 1.6rem);
-  border-radius: var(--border-radius-1);
   align-self: flex-end;
+
   border: none;
+  border-radius: var(--border-radius-1);
+
+  height: calc(1.8rem + 2 * 1.6rem);
+  background-color: #45260a;
+
   font-size: 2rem;
   font-family: "Rubik";
   font-weight: 600;
   color: #fff;
-  background-color: #45260a;
+
   cursor: pointer;
   transition: color 0.25s, background-color 0.25s;
 }
+
 .cta-submit-btn:hover {
-  color: #45260a;
   background-color: #fff;
+
+  color: #45260a;
 }
 
 /* 1360 px - SMALL LAPTOPS */
@@ -96,20 +126,25 @@
   .cta {
     grid-template-columns: 60fr 40fr;
   }
+
   .cta-form {
     grid-template-columns: 1fr;
     row-gap: 3.2rem;
   }
+
   .cta-text-content {
     padding: 4.8rem;
   }
+
   .cta-paragraph {
     font-size: 2rem;
   }
 }
+
 /* 720 px - TABLETS */
 @media only screen and (max-width: 45em) {
 }
+
 /* 560 px - PHONES */
 @media only screen and (max-width: 35em) {
   .cta {
@@ -118,6 +153,7 @@
       "media"
       "text";
   }
+
   .cta-text-content {
     padding: 4.8rem 3.2rem 3.2rem 3.2rem;
   }

@@ -4,20 +4,22 @@
 }
 
 .testimonial-text {
-  line-height: 1.8;
-  font-size: 1.8rem;
   margin-bottom: 1.2rem;
+
+  font-size: 1.8rem;
+  line-height: 1.8;
 }
 .testimonial-picture {
-  width: 6.4rem;
-  clip-path: circle(50%);
-  height: 6.4rem;
   margin-bottom: 1.8rem;
+
+  width: 6.4rem;
+  height: 6.4rem;
+
+  clip-path: circle(50%);
 }
 .testimonial-name {
   color: #6f6f6f;
   font-size: 1.6rem;
-  /* margin-top: 2rem; */
 }
 
 /* 1360 px - SMALL LAPTOPS */
@@ -38,14 +40,9 @@
     width: 8rem;
   }
 }
+
 /* 560 px - PHONES */
 @media only screen and (max-width: 35em) {
-  /* .testimonial-card:nth-child(even) {
-    align-items: end;
-  }
-  .testimonial-card:nth-child(even) .testimonial-text {
-    text-align: end;
-  } */
   .testimonial-text {
     font-size: 2rem;
   }

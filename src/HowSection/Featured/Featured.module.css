@@ -6,21 +6,21 @@
   gap: 4.8rem;
   justify-content: center;
   flex-wrap: wrap;
-  /* justify-content: space-evenly; */
 }
 .heading-logos {
+  margin-bottom: 2.4rem;
+
   font-size: 1.4rem;
   font-weight: 400;
   text-transform: uppercase;
   color: #888;
   text-align: center;
-  margin-bottom: 2.4rem;
   line-height: 1.6;
 }
 
 .logo {
-  /* filter: grayscale(100%); */
   height: 3.2rem;
+
   filter: brightness(0) opacity(0.5);
   transition: all 0.15s;
   cursor: pointer;

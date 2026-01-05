@@ -19,35 +19,44 @@
   */
 
   font-size: 62.5%;
+  --border-radius-1: 10px;
+
   --primary-main: #e67e22;
   --primary-hint: #fdf2e9;
-  --box-shadow-1: rgba(230, 126, 34, 0.5);
   --primary-shade: #cf711f;
-  --border-radius-1: 10px;
-  --fade-down: fadeDown 1s ease infinite;
+
+  /* --outline-1: rgba(230, 125, 34, 0.5) 0px 0px 0px 0.6rem; */
+  --outline-1: var(--primary-main) 0px 0px 0px 0.6rem;
+  --outline-2: var(--primary-shade) 0px 0px 0px 0.6rem;
+  --outline-3: var(--primary-hint) 0px 0px 0px 0.6rem;
+
   --shadow-1: rgba(78, 52, 52, 0.09) 0px 3px 12px;
   --shadow-2: rgba(17, 17, 26, 0.1) 0px 4px 16px,
     rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
   --shadow-3: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-  --outline-main: 7px solid var(--primary-main);
+  --outline-main: 1px solid var(--primary-main);
   --outline-hint: 7px solid var(--primary-hint);
   --outline-shade: 7px solid var(--primary-shade);
+
+  --fade-down: fadeDown 1s ease infinite;
 }
 html {
   scroll-behavior: smooth;
 }
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+
+  box-sizing: border-box;
 
   line-height: 1;
 }
 
-*:focus-visible {
-  outline: var(--outline-shade);
-  border-radius: var(--border-radius-1);
+*:focus {
+  /* outline: var(--outline-shade); */
+  outline: none;
+  box-shadow: var(--outline-1);
 }
 
 body {
@@ -63,6 +72,7 @@ p {
 /* 1360 px - SMALL LAPTOPS */
 @media (max-width: 85em) {
 }
+
 /* 1200 px - LANDSCAPE TABLETS */
 @media (max-width: 75em) {
   :root {
@@ -83,12 +93,11 @@ p {
     font-size: 40.62%;
   }
 }
+
 /* 560 px - PHONES */
 @media (max-width: 35em) {
-  :root {
-    /* font-size: 40.62%; */
-  }
 }
+
 /* 480 px - SMALL PHONES */
 @media (max-width: 30em) {
   :root {

@@ -1,81 +1,98 @@
 .card {
   display: grid;
   grid-template-columns: 1fr;
+
   border-radius: var(--border-radius-1);
-  overflow: hidden;
-  box-shadow: var(--shadow-1);
-  transition: all 0.25s;
+
   width: 100%;
   max-width: 40rem;
+  box-shadow: var(--shadow-1);
+
+  overflow: hidden;
+  transition: transform 0.25s;
 }
+
 .card:hover {
   transform: translateY(-10px);
 }
+
 .card-media {
   height: 100%;
-  max-height: 25.6rem;
   width: 100%;
+  max-height: 25.6rem;
+
   object-fit: cover;
   object-position: right;
 }
+
 .card-content {
   padding: 3.2rem 4.8rem 4.8rem 4.8rem;
 }
+
 .meals-attributes {
-  margin: 0;
   padding: 0 0 0 2.4rem;
-  /* list-style: none; */
+  margin: 0;
 }
+
 .meal-attribute {
-  font-size: 1.8rem;
   margin: 1.6rem 0;
   padding-left: 1.5rem;
+
+  font-size: 1.8rem;
 }
+
 .meal-attribute--calories {
   list-style-type: "🔥";
 }
+
 .meal-attribute--nutriscore {
   list-style-type: "🍔";
 }
+
 .meal-attribute--rating {
   list-style-type: "⭐";
 }
+
 .meal-number {
   font-weight: 600;
 }
+
 .meal-title {
-  font-size: 2.4rem;
-  color: #333;
-  font-weight: 600;
   margin: 0.8rem 0 2.4rem 0;
+
+  font-size: 2.4rem;
+  font-weight: 600;
   text-transform: capitalize;
+  color: #333;
 }
+
 .tags-container {
   display: flex;
   gap: 0.8rem;
 }
+
 .tag {
-  display: inline-block;
-  font-size: 1.2rem;
   padding: 0.4rem 0.8rem;
+  border-radius: 100px;
+
   background-color: #40c057;
+
+  font-size: 1.2rem;
   font-weight: 700;
   text-transform: uppercase;
-  border-radius: 100px;
   color: #333;
 }
+
 @media only screen and (max-width: 35em) {
   .card {
     grid-template-columns: 40fr 60fr;
-    /* max-width: 80%; */
     max-width: 55rem;
   }
+
   .card-content {
     padding: 2.4rem 0 2.4rem 3.2rem;
   }
 }
+
 @media only screen and (max-width: 30em) {
-  /* .card {
-    grid-template-columns: 1fr;
-    } */
 }

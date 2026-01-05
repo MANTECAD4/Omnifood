@@ -15,8 +15,8 @@
 /* 960 px - TABLETS */
 @media only screen and (max-width: 60em) {
   .features {
-    gap: 2.8rem;
     grid-template-columns: 1fr 1fr;
+    gap: 2.8rem;
   }
 }
 /* 720 px - TABLETS */
