@@ -20,7 +20,13 @@
   </head>
   <body>
     <div id="root"></div>
-    <form name="sign-up" netlify netlify-honeypot="bot-field" hidden>
+    <form
+      name="sign-up"
+      netlify
+      netlify-honeypot="bot-field"
+      hidden
+      method="post"
+    >
       <input type="text" name="fullName" />
       <input type="email" name="email" />
       <select name="source"></select>
