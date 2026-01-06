@@ -12,7 +12,7 @@ export const FormSection = () => {
             eating well today. You can cancel or pause anytime. And the first
             meal is on us!
           </p>
-          <form className={styles["cta-form"]} name="sign-up" method="POST">
+          <form className={styles["cta-form"]} name="sign-up">
             <div className={styles["cta-form-field"]}>
               <label className={styles["input-label"]} htmlFor="fullName">
                 Full name
