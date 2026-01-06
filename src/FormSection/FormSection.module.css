@@ -29,7 +29,7 @@
 
   width: 100%;
   background-image: linear-gradient(rgb(230, 126, 34, 0.26)),
-    url("img/eating.jpg");
+    url("/img/eating.jpg");
   background-size: cover;
   background-position: center;
 }
