@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import { MobileNavButton } from "./MobileNav/MobileNavButton";
 import styles from "./Navbar.module.css";
-import { useMediaQuery } from "@uidotdev/usehooks";
+import { useDebounce, useMediaQuery } from "@uidotdev/usehooks";
 const links = [
   { label: "How it works", href: "#how-section" },
   { label: "Meals", href: "#meals-section" },
@@ -16,7 +16,7 @@ export const Navbar: FC<Props> = ({ enableSticky: isIntersecting }) => {
   const matchesMobileSize = useMediaQuery("(max-width: 60em)");
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const isMenuHidden = useDebounce(!isMenuOpen, 250);
   useEffect(() => {
     if (matchesMobileSize === false) setIsMenuOpen(false);
   }, [matchesMobileSize, setIsMenuOpen]);
@@ -37,7 +37,9 @@ export const Navbar: FC<Props> = ({ enableSticky: isIntersecting }) => {
             ? `${styles["mobile-nav"]} ${
                 isMenuOpen
                   ? styles["menu-open"]
-                  : `${styles["menu-closed"]} ${styles["menu-hidden"]}`
+                  : `${styles["menu-closed"]} ${
+                      isMenuHidden ? styles["menu-hidden"] : ""
+                    }`
               }`
             : ""
         }`}
